@@ -1,7 +1,7 @@
 package com.cc.idle.framework.mybatis.core.type;
 
 import cn.hutool.core.collection.CollUtil;
-import com.idle.framework.common.util.string.StrUtils;
+import com.cc.idle.framework.common.util.string.StrUtils;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;
 import org.apache.ibatis.type.MappedTypes;

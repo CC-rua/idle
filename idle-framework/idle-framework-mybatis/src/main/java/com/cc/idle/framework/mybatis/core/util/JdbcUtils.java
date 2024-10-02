@@ -2,6 +2,7 @@ package com.cc.idle.framework.mybatis.core.util;
 
 import com.baomidou.dynamic.datasource.DynamicRoutingDataSource;
 import com.baomidou.mybatisplus.annotation.DbType;
+import com.cc.idle.framework.common.util.spring.SpringUtils;
 import com.cc.idle.framework.mybatis.core.enums.DbTypeEnum;
 
 import javax.sql.DataSource;
