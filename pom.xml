@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>idle-dependencies</module>
+        <module>idle-gateway</module>
     </modules>
 
     <properties>
