@@ -1,0 +1,4 @@
+com.cc.idle.framework.web.jackson.config.IdleGameJacksonAutoConfiguration
+com.cc.idle.framework.web.swagger.config.IdleGameSwaggerAutoConfiguration
+com.cc.idle.framework.web.web.config.IdleGameWebAutoConfiguration
+com.cc.idle.framework.web.banner.config.IdleGameBannerAutoConfiguration

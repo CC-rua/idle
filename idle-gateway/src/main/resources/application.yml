@@ -3,13 +3,6 @@ spring:
     name: gateway-server
   profiles:
     active: local
-  cloud:
-    gateway:
-      routes:
-        - id: test_route
-          uri: https://baidu.com/
-          predicates:
-            - Path=/**
   config:
     import:
       - optional:classpath:application-${spring.profiles.active}.yaml # 加载【本地】配置

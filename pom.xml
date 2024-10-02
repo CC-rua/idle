@@ -14,6 +14,10 @@
         <module>idle-framework</module>
         <module>idle-framework/idle-framework-mybatis</module>
         <module>idle-framework/idle-framework-common</module>
+        <module>idle-game-config</module>
+        <module>idle-framework/idle-framework-web</module>
+        <module>idle-game-config/idle-game-config-api</module>
+        <module>idle-game-config/idle-game-config-biz</module>
     </modules>
 
     <properties>

@@ -1,18 +1,39 @@
 --- #################### 注册中心 + 配置中心相关配置 ####################
 
 spring:
+  web:
+    resources:
+      add-mappings: true
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848 # Nacos 服务器地址
-      username: # Nacos 账号
-      password: # Nacos 密码
+      username: nacos # Nacos 账号
+      password: nacos # Nacos 密码
       discovery: # 【配置中心】配置项
-        namespace: dev # 命名空间。这里使用 dev 开发环境
+        namespace: e19c1604-4f83-4f3c-9b7e-5419d7d918c4 # 命名空间。这里使用 dev 开发环境
         group: DEFAULT_GROUP # 使用的 Nacos 配置分组，默认为 DEFAULT_GROUP
       config: # 【注册中心】配置项
-        namespace: dev # 命名空间。这里使用 dev 开发环境
+        namespace: e19c1604-4f83-4f3c-9b7e-5419d7d918c4 # 命名空间。这里使用 dev 开发环境
         group: DEFAULT_GROUP # 使用的 Nacos 配置分组，默认为 DEFAULT_GROUP
-
+    # Spring Cloud Gateway 配置项，对应 GatewayProperties 类
+    gateway:
+      # 路由配置项，对应 RouteDefinition 数组
+      routes:
+        ## game-config-server 服务
+        - id: game-config-admin-api # 路由的编号
+          uri: grayLb://game-config-server
+          predicates: # 断言，作为路由的匹配条件，对应 RouteDefinition 数组
+            - Path=/admin-api/game-config/**
+          filters:
+            - RewritePath=/admin-api/game-config/v3/api-docs, /v3/api-docs # 配置，保证转发到 /v3/api-docs
+knife4j:
+  # 聚合 Swagger 文档，参考 https://doc.xiaominfo.com/docs/action/springcloud-gateway 文档
+  gateway:
+    enabled: true
+    routes:
+      - name: game-config-server
+        service-name: game-config-server
+        url: /admin-api/game-config/v3/api-docs
 # 日志文件配置
 logging:
   level:
