@@ -11,6 +11,9 @@
     <modules>
         <module>idle-dependencies</module>
         <module>idle-gateway</module>
+        <module>idle-framework</module>
+        <module>idle-framework/idle-framework-mybatis</module>
+        <module>idle-framework/idle-framework-common</module>
     </modules>
 
     <properties>
