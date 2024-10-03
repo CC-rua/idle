@@ -4,7 +4,7 @@ import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
-import com.idle.framework.common.util.collection.ArrayUtils;
+import com.cc.idle.framework.common.util.collection.ArrayUtils;
 import org.springframework.util.StringUtils;
 
 import java.util.Collection;

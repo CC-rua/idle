@@ -18,6 +18,7 @@
         <module>idle-framework/idle-framework-web</module>
         <module>idle-game-config/idle-game-config-api</module>
         <module>idle-game-config/idle-game-config-biz</module>
+        <module>idle-framework/idle-framework-excel</module>
     </modules>
 
     <properties>

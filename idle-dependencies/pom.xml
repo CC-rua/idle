@@ -28,6 +28,8 @@
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <hutool-5.version>5.8.29</hutool-5.version>
         <hutool-6.version>6.0.0-M14</hutool-6.version>
+        <net.coobird.thumbnailator.version>0.4.8</net.coobird.thumbnailator.version>
+        <easyexcel.verion>3.3.3</easyexcel.verion>
         <!--数据库-->
         <druid.version>1.2.23</druid.version>
         <mybatis.version>3.5.16</mybatis.version>
@@ -36,7 +38,6 @@
         <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <mybatis-plus-join.version>1.4.13</mybatis-plus-join.version>
         <easy-trans.version>3.0.5</easy-trans.version>
-
     </properties>
 
     <dependencyManagement>
@@ -110,6 +111,16 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>${net.coobird.thumbnailator.version}</version> <!-- 谷歌图片压缩-->
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.verion}</version>
             </dependency>
             <!-- DB 相关 -->
             <dependency>
