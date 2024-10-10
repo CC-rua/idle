@@ -27,6 +27,9 @@ idle:
     path: /data/game-config
     url: http://localhost:10900/data
     url-prefix: /data
+  game:
+    config:
+      json-path: /data/game_plat
 
 springdoc:
   api-docs:

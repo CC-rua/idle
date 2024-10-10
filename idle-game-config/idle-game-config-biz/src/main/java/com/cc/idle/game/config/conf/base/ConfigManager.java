@@ -34,7 +34,7 @@ public class ConfigManager {
     /**
      * json 配置文件的根路径
      */
-    @Value("${gameplat.game.config.json-path}")
+    @Value("${idle.game.config.json-path}")
     private String basePath;
     /**
      * 所有的配置文件
