@@ -29,7 +29,7 @@ idle:
     url-prefix: /data
   game:
     config:
-      json-path: /data/game_plat
+      json-path: script/json
 
 springdoc:
   api-docs:
