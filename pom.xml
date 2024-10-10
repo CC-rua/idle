@@ -12,13 +12,8 @@
         <module>idle-dependencies</module>
         <module>idle-gateway</module>
         <module>idle-framework</module>
-        <module>idle-framework/idle-framework-mybatis</module>
-        <module>idle-framework/idle-framework-common</module>
         <module>idle-game-config</module>
-        <module>idle-framework/idle-framework-web</module>
-        <module>idle-game-config/idle-game-config-api</module>
-        <module>idle-game-config/idle-game-config-biz</module>
-        <module>idle-framework/idle-framework-excel</module>
+        <module>idle-game-user</module>
     </modules>
 
     <properties>

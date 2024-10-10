@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.cc</groupId>
-        <artifactId>idle</artifactId>
-        <version>1.0.0-snapshot</version>
-        <relativePath>../../pom.xml</relativePath>
+        <artifactId>idle-framework</artifactId>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>idle-framework-web</artifactId>
-
+    <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -40,6 +39,7 @@
             <artifactId>idle-framework-common</artifactId>
             <version>${revision}</version>
         </dependency>
+
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>

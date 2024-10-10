@@ -22,7 +22,7 @@ public class BannerApplicationRunner implements ApplicationRunner {
                             "项目启动成功！\n\t" +
                             "接口文档: \t{} \n\t" +
                             "----------------------------------------------------------",
-                    "http://localhost:10900/doc.html/");
+                    "http://localhost:10800/doc.html/");
         });
     }
 

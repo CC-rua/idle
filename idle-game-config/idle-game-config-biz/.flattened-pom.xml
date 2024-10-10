@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.cc</groupId>
-    <artifactId>idle</artifactId>
+    <artifactId>idle-game-config</artifactId>
     <version>1.0.0-snapshot</version>
   </parent>
-  <artifactId>idle-gateway</artifactId>
+  <artifactId>idle-game-config-biz</artifactId>
   <version>1.0.0-snapshot</version>
   <properties>
     <maven.compiler.target>17</maven.compiler.target>
@@ -17,32 +17,23 @@
   <dependencies>
     <dependency>
       <groupId>com.cc</groupId>
-      <artifactId>idle-framework-common</artifactId>
+      <artifactId>idle-game-config-api</artifactId>
       <version>${revision}</version>
     </dependency>
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-gateway</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.github.xiaoymin</groupId>
-      <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+      <groupId>com.cc</groupId>
+      <artifactId>idle-framework-web</artifactId>
+      <version>${revision}</version>
     </dependency>
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.alibaba.cloud</groupId>
-      <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springdoc</groupId>
-      <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+      <groupId>com.cc</groupId>
+      <artifactId>idle-framework-excel</artifactId>
+      <version>${revision}</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>

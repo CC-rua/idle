@@ -1,6 +1,6 @@
 spring:
   application:
-    name: game-config-server
+    name: game-user-server
   profiles:
     active: local
   config:
@@ -8,7 +8,7 @@ spring:
       - optional:classpath:application-${spring.profiles.active}.yaml # 加载【本地】配置
       - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml # 加载【Nacos】的配置
 server:
-  port: 10900
+  port: 11000
 
 management:
   endpoints:
@@ -18,14 +18,11 @@ management:
 idle:
   info:
     version: 1.0.0
-    base-package: com.cc.idle.framework.game.config
+    base-package: com.cc.idle.game.user
   swagger:
     title: 管理后台
-    description: 游戏配置文件
+    description: 角色信息
     version: ${idle.info.version}
-  game:
-    config:
-      json-path: script/json
 
 springdoc:
   api-docs:
@@ -40,7 +37,7 @@ springdoc:
       paths-to-match: '/**'
       packages-to-scan:
         # 配置接口文档扫描包路径，每个服务的路径不同
-        - com.cc.idle.game.config.controller
+        - com.cc.idle.game.user.controller
 knife4j:
   enable: true # 2.2 是否开启 Swagger 文档的 Knife4j UI 界面
   setting:

@@ -5,43 +5,37 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.cc</groupId>
-        <artifactId>idle-game-config</artifactId>
+        <artifactId>idle-framework</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>idle-game-config-biz</artifactId>
+    <artifactId>idle-framework-rpc</artifactId>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
-
+        <!-- RPC 远程调用相关 -->
         <dependency>
-            <groupId>com.cc</groupId>
-            <artifactId>idle-game-config-api</artifactId>
-            <version>${revision}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.cc</groupId>
-            <artifactId>idle-framework-web</artifactId>
-            <version>${revision}</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
-        <!-- Registry 注册中心相关 -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
         </dependency>
 
+        <!-- 工具相关 -->
         <dependency>
-            <groupId>com.cc</groupId>
-            <artifactId>idle-framework-excel</artifactId>
-            <version>${revision}</version>
-            <scope>compile</scope>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
         </dependency>
-
     </dependencies>
+
 </project>

@@ -1,0 +1,87 @@
+{
+  "header": [
+    {
+      "id": 0,
+      "fieldName": "id",
+      "comment": "id"
+    },
+    {
+      "id": 1,
+      "fieldName": "item",
+      "comment": "商品"
+    },
+    {
+      "id": 2,
+      "fieldName": "itemList",
+      "comment": "商品列表"
+    },
+    {
+      "id": 3,
+      "fieldName": "name",
+      "comment": "名称"
+    },
+    {
+      "id": 4,
+      "fieldName": "intNum",
+      "comment": "数值"
+    },
+    {
+      "id": 5,
+      "fieldName": "icon",
+      "comment": "资源"
+    },
+    {
+      "id": 6,
+      "fieldName": "expression",
+      "comment": "表达式"
+    },
+    {
+      "id": 7,
+      "fieldName": "expressionParam",
+      "comment": "表达式参数"
+    },
+    {
+      "id": 8,
+      "fieldName": "expressionDesc",
+      "comment": "表达式描述"
+    },
+    {
+      "id": 9,
+      "fieldName": "round",
+      "comment": "刷新周期"
+    },
+    {
+      "id": 10,
+      "fieldName": "roundDesc",
+      "comment": "周期描述"
+    }
+  ],
+  "data": [
+    {
+      "0": 1,
+      "1": "10001:1",
+      "2": null,
+      "3": 1,
+      "4": "1002",
+      "5": "goods_1",
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    },
+    {
+      "0": 2,
+      "1": "10001:1",
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": "goods_1",
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null
+    }
+  ]
+}
