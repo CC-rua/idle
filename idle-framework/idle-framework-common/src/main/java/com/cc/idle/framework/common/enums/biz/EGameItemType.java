@@ -5,10 +5,8 @@ import lombok.Getter;
 @Getter
 public enum EGameItemType {
     ITEM(1, "虚拟材料无任何特殊功能"),
-    VOUCHER(2, "兑换券，可兑换现实物品"),
-    ICON(3, "头像，可穿戴在头像栏"),
-    ICON_BGK(4, "头像框，可穿戴在头像框栏")
-    ;
+    ICON(2, "头像，可穿戴在头像栏"),
+    ICON_BGK(3, "头像框，可穿戴在头像框栏");
 
     private int code;
     private String desc;
