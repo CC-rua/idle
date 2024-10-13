@@ -3,15 +3,12 @@ package com.cc.idle.framework.web.web.config;
 
 import com.cc.idle.framework.common.enums.WebFilterOrderEnum;
 import com.cc.idle.framework.web.web.core.filter.CacheRequestBodyFilter;
-import com.cc.idle.framework.web.web.core.filter.DemoFilter;
 import com.cc.idle.framework.web.web.core.handler.GlobalResponseBodyHandler;
 import com.cc.idle.framework.web.web.core.util.WebFrameworkUtils;
 import jakarta.annotation.Resource;
 import jakarta.servlet.Filter;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -91,14 +88,6 @@ public class IdleGameWebAutoConfiguration implements WebMvcConfigurer {
         return createFilterBean(new CacheRequestBodyFilter(), WebFilterOrderEnum.REQUEST_BODY_CACHE_FILTER);
     }
 
-    /**
-     * 创建 DemoFilter Bean，演示模式
-     */
-    @Bean
-    @ConditionalOnProperty(value = "idleGame.demo", havingValue = "true")
-    public FilterRegistrationBean<DemoFilter> demoFilter() {
-        return createFilterBean(new DemoFilter(), WebFilterOrderEnum.DEMO_FILTER);
-    }
 
     public static <T extends Filter> FilterRegistrationBean<T> createFilterBean(T filter, Integer order) {
         FilterRegistrationBean<T> bean = new FilterRegistrationBean<>(filter);

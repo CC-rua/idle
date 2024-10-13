@@ -1,0 +1,2 @@
+com.cc.idle.framework.config.IdleGameWebSocketAutoConfiguration
+com.cc.idle.framework.config.WebSocketServer
