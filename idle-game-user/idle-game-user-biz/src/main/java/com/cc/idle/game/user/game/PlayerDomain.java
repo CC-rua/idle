@@ -11,7 +11,9 @@ import com.cc.idle.framework.common.util.date.GlobalTimeUtil;
 import com.cc.idle.framework.common.util.json.JsonUtils;
 import com.cc.idle.framework.common.util.object.CastUtil;
 import com.cc.idle.game.config.api.conf.Config_GameConstApi;
+import com.cc.idle.game.config.api.conf.Config_GameItemApi;
 import com.cc.idle.game.config.api.conf.dto.Config_GameConstDTO;
+import com.cc.idle.game.config.api.conf.dto.Config_GameItemDTO;
 import com.cc.idle.game.user.enums.EGameCommand;
 import com.cc.idle.game.user.enums.EOnlineState;
 import com.cc.idle.game.user.events.base._IPlayerGameEvent;
@@ -28,7 +30,6 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
@@ -63,9 +64,9 @@ public class PlayerDomain {
      */
     private final Config_GameConstApi constApi;
     /**
-     * 客户端通知消息
+     * 道具配置
      */
-    private final RedisTemplate<String, Object> clientNotifyRedisTemplate;
+    private final Config_GameItemApi itemApi;
     /**
      * 玩家身份数据
      */
@@ -226,11 +227,11 @@ public class PlayerDomain {
     }
 
     public _IPlayerItemDealer lookupItemDealer(long configId) {
-//        Config_GameItemDTO itemConfig = itemConfigApi.get(configId);
-//        if (itemConfig == null) {
-//            log.error("无法找到物品的配置 configId:{}", configId);
-//            return null;
-//        }
+        Config_GameItemDTO itemConfig = itemApi.get(configId);
+        if (itemConfig == null) {
+            log.error("无法找到物品的配置 configId:{}", configId);
+            return null;
+        }
         EGameItemType type = EGameItemType.ITEM;
         return lookupItemDealer(type);
     }

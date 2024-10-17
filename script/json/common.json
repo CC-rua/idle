@@ -1,0 +1,26 @@
+{
+  "header": [
+    {
+      "id": 0,
+      "fieldName": "id",
+      "comment": "id"
+    },
+    {
+      "id": 1,
+      "fieldName": "desc",
+      "comment": "描述"
+    },
+    {
+      "id": 2,
+      "fieldName": "value",
+      "comment": "配置值"
+    }
+  ],
+  "data": [
+    {
+      "0": 1,
+      "1": "临时登录密钥",
+      "2": "123456789"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Data
 @RequiredArgsConstructor
 @Component
-@GameConfig(fileName = "gameExampleConfig.json")
+@GameConfig(fileName = "example.json")
 public class Config_gameExampleConfig extends Config_GameExampleDTO implements _AConfig {
     @GameConfig(ignoreField = true)
     private static _AConfigLoader<Config_gameExampleConfig> INSTANCE = new _AConfigLoader<>() {

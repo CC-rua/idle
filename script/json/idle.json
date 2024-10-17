@@ -1,0 +1,38 @@
+{
+  "header": [
+    {
+      "id": 0,
+      "fieldName": "id",
+      "comment": "id"
+    },
+    {
+      "id": 1,
+      "fieldName": "name",
+      "comment": "名称"
+    },
+    {
+      "id": 2,
+      "fieldName": "desc",
+      "comment": "描述"
+    },
+    {
+      "id": 3,
+      "fieldName": "settleTime",
+      "comment": "结算时间(秒)"
+    },
+    {
+      "id": 4,
+      "fieldName": "item",
+      "comment": "结算奖励"
+    }
+  ],
+  "data": [
+    {
+      "0": 1,
+      "1": "打螺丝",
+      "2": "打螺丝",
+      "3": "3",
+      "4": "1001:1"
+    }
+  ]
+}

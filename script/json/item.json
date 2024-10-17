@@ -1,0 +1,26 @@
+{
+  "header": [
+    {
+      "id": 0,
+      "fieldName": "id",
+      "comment": "id"
+    },
+    {
+      "id": 1,
+      "fieldName": "desc",
+      "comment": "描述"
+    },
+    {
+      "id": 2,
+      "fieldName": "name",
+      "comment": "名称"
+    }
+  ],
+  "data": [
+    {
+      "0": 1001,
+      "1": "测试物品",
+      "2": "螺丝"
+    }
+  ]
+}
