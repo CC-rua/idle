@@ -38,6 +38,7 @@
         <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <mybatis-plus-join.version>1.4.13</mybatis-plus-join.version>
         <easy-trans.version>3.0.5</easy-trans.version>
+        <redisson.version>3.26.0</redisson.version>
     </properties>
 
     <dependencyManagement>
@@ -182,6 +183,17 @@
                 <groupId>com.fhs-opensource</groupId>
                 <artifactId>easy-trans-anno</artifactId>
                 <version>${easy-trans.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-actuator</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>

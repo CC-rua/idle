@@ -1,0 +1,2 @@
+com.cc.idle.framework.redis.config.GameCacheAutoConfiguration
+com.cc.idle.framework.redis.config.GameRedisAutoConfiguration

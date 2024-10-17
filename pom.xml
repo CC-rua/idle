@@ -15,6 +15,7 @@
         <module>idle-game-config</module>
         <module>idle-game-user</module>
         <module>idle-framework/idle-framework-websocket</module>
+        <module>idle-framework/idle-framework-redis</module>
     </modules>
 
     <properties>
