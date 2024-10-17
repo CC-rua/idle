@@ -1,5 +1,6 @@
 <template>
   <v-app>
+
     <v-app-bar color="primary">
       <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer" />
       <v-toolbar-title>挂机游戏</v-toolbar-title>
@@ -10,21 +11,24 @@
     </v-navigation-drawer>
 
 
-    <v-main>
+    <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
+      <v-card style="margin-top: 1px; margin-left: 1px;">
       <v-container class="custom-container" fluid>
-        <router-view></router-view>
+     
+          <router-view />
+     
       </v-container>
+    </v-card>
     </v-main>
-
   </v-app>
 </template>
 
+
 <style scoped>
 .custom-container {
-  height: 100vh;
+  height: 80vh;
   padding: 0;
   margin: 0;
-  min-width: 1920px;
 }
 </style>
 

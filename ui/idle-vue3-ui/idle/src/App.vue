@@ -12,6 +12,8 @@ import AppBarView from './views/index/AppBarView.vue';
   padding: 0 0 0 0;
   text-align: center;
   max-width: 1920px;
+  min-width: none;
 }
+
 
 </style>
