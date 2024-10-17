@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static com.cc.idle.framework.common.pojo.CommonResult.success;
 
-@Tag(name = "用户服务器 - 测试")
+@Tag(name = "管理 - 用户服务器 - 测试")
 @RestController
 @RequestMapping("/game-user/test")
 @Validated

@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 /**
 * @author cc
 * @description 针对表【player_game_idle(挂机结算)】的数据库操作Mapper
-* @createDate 2024-10-17 11:21:11
+* @createDate 2024-10-17 16:22:49
 * @Entity com.cc.idle.game.user.mybaits.generator.domain.PlayerGameIdleDo
 */
 public interface PlayerGameIdleMapper extends BaseMapper<PlayerGameIdleDo> {

@@ -17,5 +17,7 @@ public interface ErrorCodeConstants {
     ErrorCode GAME_USER_NOT_ONLINE = new ErrorCode(1_003_001_010, "玩家 - 不在线");
     ErrorCode GAME_NAME_NOT_CHANGE = new ErrorCode(1_003_001_011, "玩家 - 与当前用户名一致");
     ErrorCode GAME_NAME_EMPTY = new ErrorCode(1_003_001_011, "玩家 - 用户名不能为空");
+    // ========== 挂机组件 1-003-001-000 ==========
+    ErrorCode GAME_IDLE_NOT_START = new ErrorCode(1_003_002_001, "挂机 - 挂机未开始");
 
 }

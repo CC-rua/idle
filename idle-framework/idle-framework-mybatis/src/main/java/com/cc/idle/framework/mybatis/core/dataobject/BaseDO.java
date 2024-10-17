@@ -46,10 +46,5 @@ public abstract class BaseDO implements Serializable, TransPojo {
      */
     @TableField(fill = FieldFill.INSERT_UPDATE, jdbcType = JdbcType.VARCHAR)
     private String updater;
-    /**
-     * 是否删除
-     */
-    @TableLogic
-    private Boolean deleted;
 
 }

@@ -32,10 +32,10 @@ public class ItemComponent extends _APlayerComponent implements _IPlayerItemDeal
     public void initAsync(PlayerDomain playerDomain) {
         this.player = playerDomain;
         Long roleId = playerDomain.getRoleId();
-        List<PlayerGameItemDo> gameQuestList = lambdaQuery(PlayerGameItemDo.class)
+        List<PlayerGameItemDo> playerDoList = lambdaQuery(PlayerGameItemDo.class)
                 .eq(PlayerGameItemDo::getRoleId, roleId)
                 .list();
-        doList.addAll(gameQuestList);
+        doList.addAll(playerDoList);
     }
 
     @Override

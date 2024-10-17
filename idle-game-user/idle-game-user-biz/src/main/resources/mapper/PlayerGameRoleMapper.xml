@@ -9,12 +9,16 @@
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="isNew" column="is_new" jdbcType="BOOLEAN"/>
             <result property="locked" column="locked" jdbcType="BOOLEAN"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+            <result property="updater" column="updater" jdbcType="VARCHAR"/>
             <result property="deleted" column="deleted" jdbcType="BOOLEAN"/>
-            <result property="createTime" column="create_time" jdbcType="TIME"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,name,is_new,
-        locked,deleted,create_time
+        locked,creator,updater,
+        deleted,create_time,update_time
     </sql>
 </mapper>

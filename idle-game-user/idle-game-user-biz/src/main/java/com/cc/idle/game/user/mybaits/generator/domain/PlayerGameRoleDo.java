@@ -2,18 +2,21 @@ package com.cc.idle.game.user.mybaits.generator.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.cc.idle.framework.mybatis.core.dataobject.BaseDO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 游戏角色
+ *
  * @TableName player_game_role
  */
-@TableName(value ="player_game_role")
+@EqualsAndHashCode(callSuper = true)
+@TableName(value = "player_game_role")
 @Data
-public class PlayerGameRoleDo implements Serializable {
+public class PlayerGameRoleDo extends BaseDO implements Serializable {
     /**
      * 唯一id
      */
@@ -37,18 +40,6 @@ public class PlayerGameRoleDo implements Serializable {
      */
     @TableField(value = "locked")
     private Boolean locked;
-
-    /**
-     * 是否删除
-     */
-    @TableField(value = "deleted")
-    private Boolean deleted;
-
-    /**
-     * 
-     */
-    @TableField(value = "create_time")
-    private Date createTime;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

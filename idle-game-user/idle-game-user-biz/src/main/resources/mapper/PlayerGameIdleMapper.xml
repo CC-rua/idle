@@ -8,12 +8,11 @@
             <result property="id" column="id" jdbcType="BIGINT"/>
             <result property="roleId" column="role_id" jdbcType="BIGINT"/>
             <result property="configId" column="config_id" jdbcType="BIGINT"/>
-            <result property="settleTime" column="settle_time" jdbcType="TIMESTAMP"/>
-            <result property="createTime" column="create_time" jdbcType="TIME"/>
+            <result property="settleTime" column="settle_time" jdbcType="BIGINT"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,role_id,config_id,
-        settle_time,create_time
+        settle_time
     </sql>
 </mapper>

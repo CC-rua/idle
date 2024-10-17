@@ -9,11 +9,10 @@
             <result property="roleId" column="role_id" jdbcType="BIGINT"/>
             <result property="paramType" column="param_type" jdbcType="INTEGER"/>
             <result property="value" column="value" jdbcType="VARCHAR"/>
-            <result property="createTime" column="create_time" jdbcType="TIME"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         id,role_id,param_type,
-        value,create_time
+        value
     </sql>
 </mapper>
