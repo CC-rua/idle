@@ -30,11 +30,14 @@ const vuetify = createVuetify({
     blueprint: md3,
 })
 
+
 app.use(createPinia())
 app.use(router)
 app.use(vuetify)
 app.use(VueAxios, axios);
 
+
 app.mount('#app')
 
 axios.defaults.baseURL = "/api";
+

@@ -1,9 +1,24 @@
 <script setup>
 import AppBarView from './views/index/AppBarView.vue';
+import Confirm from "@/components/dialog/confirm.vue";
+import {onMounted, onUnmounted, ref} from "vue";
+import eventBus from "@/plugins/eventBus.js";
+
+const confirmRef = ref(null);
+const OpenDialog = (options) => {
+  confirmRef.value.openDialog(options)
+}
+onMounted(() => {
+  eventBus.on("openDialog", OpenDialog);
+})
+onUnmounted(() => {
+  eventBus.off("openDialog", OpenDialog);
+})
 </script>
 
 <template>
-  <AppBarView />
+  <AppBarView/>
+  <Confirm ref="confirmRef" :dialog="true"/>
 </template>
 <style>
 #app {
@@ -13,6 +28,4 @@ import AppBarView from './views/index/AppBarView.vue';
   text-align: center;
   max-width: 1920px;
 }
-
-
 </style>

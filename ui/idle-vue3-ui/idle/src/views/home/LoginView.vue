@@ -33,9 +33,10 @@
 </template>
 
 <script setup>
-import {computed, getCurrentInstance, ref} from 'vue';
+import {computed, getCurrentInstance, onMounted, ref} from 'vue';
 import api from "@/api/api.js";
 import {idle} from "@/api/model/const.js";
+import eventBus from "@/plugins/eventBus.js";
 // 获取当前实例
 const {proxy} = getCurrentInstance();
 // 表单数据
@@ -70,17 +71,7 @@ const login = () => {
         // proxy.$showGlobalDialog({title: '登录成功', message: '欢迎回来，管理员！'});
       } else {
         // proxy.$showGlobalDialog({title: '登录失败', message: response.data.msg})
-        proxy.$ftConfirm({
-          message: response.data.msg,
-          title: "hh",
-          show: true,
-          onConfirm: () => {
-            console.log("confirm")
-          },
-          onCancel: () => {
-            console.log("cancel")
-          }
-        })
+
       }
     })
   }
@@ -92,6 +83,27 @@ const registerRole = function () {
     console.log(response)
   })
 };
+
+onMounted(() => {
+  eventBus.emit("openDialog", {
+    title: 'ops!!!!!',
+    text: 'none',
+    icon: 'mdi-update',
+    actions: [
+      {
+        text: 'Ok',
+        method: 'cancel'
+      }
+    ],
+    confirmFunc: function () {
+      console.log('confirm')
+    }
+    ,
+    cancelFunc: function () {
+      console.log('cancel')
+    }
+  })
+})
 </script>
 
 <style scoped>
