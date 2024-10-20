@@ -17,6 +17,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>com.cc</groupId>
+            <artifactId>idle-framework-common</artifactId>
+            <version>${revision}</version>
+        </dependency>
         <!-- RPC 远程调用相关 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

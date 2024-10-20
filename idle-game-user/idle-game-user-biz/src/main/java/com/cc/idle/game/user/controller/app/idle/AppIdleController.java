@@ -40,7 +40,7 @@ public class AppIdleController {
         return success(Boolean.TRUE);
     }
 
-    @GetMapping("/start")
+    @GetMapping("/end")
     @Operation(summary = "结束产出")
     public CommonResult<Boolean> end(@RequestParam
                                      @Parameter(description = "用户id")

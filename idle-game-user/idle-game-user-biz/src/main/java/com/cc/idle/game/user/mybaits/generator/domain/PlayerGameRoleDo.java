@@ -4,17 +4,14 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.cc.idle.framework.mybatis.core.dataobject.BaseDO;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
 /**
  * 游戏角色
- *
  * @TableName player_game_role
  */
-@EqualsAndHashCode(callSuper = true)
-@TableName(value = "player_game_role")
+@TableName(value ="player_game_role")
 @Data
 public class PlayerGameRoleDo extends BaseDO implements Serializable {
     /**

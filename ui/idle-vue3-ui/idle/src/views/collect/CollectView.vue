@@ -7,7 +7,7 @@ import CollectChipView from './CollectChipView.vue';
     <v-row style="width: 1200px;">
         <v-col v-for="n in 3" :key="n" cols="12" sm="4">
             <v-sheet class="ma-2 pa-2">
-                <CollectChipView :name="123" :desc="123"/>
+                <CollectChipView :id="123" :name="'www'" :desc="'123'"/>
             </v-sheet>
         </v-col>
     </v-row>

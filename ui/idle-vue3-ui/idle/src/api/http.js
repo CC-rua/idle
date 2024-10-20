@@ -8,7 +8,7 @@ export default {
         return myAxios({
             url: url,
             method: "get",
-            data: param,
+            params: param,
         });
     }
     , post(url, body) {

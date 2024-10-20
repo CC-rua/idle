@@ -27,12 +27,27 @@
     </dependency>
     <dependency>
       <groupId>com.cc</groupId>
+      <artifactId>idle-framework-websocket</artifactId>
+      <version>${revision}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.cc</groupId>
       <artifactId>idle-framework-web</artifactId>
       <version>${revision}</version>
     </dependency>
     <dependency>
       <groupId>com.cc</groupId>
       <artifactId>idle-framework-common</artifactId>
+      <version>${revision}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.cc</groupId>
+      <artifactId>idle-framework-mybatis</artifactId>
+      <version>${revision}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.cc</groupId>
+      <artifactId>idle-framework-redis</artifactId>
       <version>${revision}</version>
     </dependency>
     <dependency>

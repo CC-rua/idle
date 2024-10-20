@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.cc.idle")
 @EnableDiscoveryClient
 @EnableFeignClients(value = "com.cc.idle.game.*.api")
 @MapperScan(value = "com.cc.idle.game.user.mybaits.generator.mapper")

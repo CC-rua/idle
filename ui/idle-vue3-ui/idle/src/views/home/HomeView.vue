@@ -1,11 +1,11 @@
 <script setup>
-import { onMounted } from 'vue';
-import { ref } from 'vue'
-import  api  from '@/api/api';
+import {onMounted, ref} from 'vue';
+import api from '@/api/api';
+import loginView from './LoginView.vue';
 
 const sayHello = ref("123")
 const sayHelloApi = function () {
- api.testApi.sayhello().then((response) => {
+  api.testApi.sayhello().then((response) => {
     sayHello.value = response.data.data
   })
 }
@@ -15,11 +15,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <v-card style="text-align: left;">
-    Home
-    <v-btn value="recent">
-      <v-icon>mdi-history</v-icon>
-      <span v-text="sayHello"></span>
-    </v-btn>
-  </v-card>
+  <login-view/>
 </template>
