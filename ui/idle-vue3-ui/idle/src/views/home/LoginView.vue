@@ -69,9 +69,16 @@ const login = () => {
     }).then((response) => {
       if (response.data.code === idle.successCode) {
         // proxy.$showGlobalDialog({title: '登录成功', message: '欢迎回来，管理员！'});
+        eventBus.emit("openDialog", {
+          title: '登录成功',
+          icon:'mdi-flower',
+          text: '欢迎回来，管理员！',
+        })
       } else {
-        // proxy.$showGlobalDialog({title: '登录失败', message: response.data.msg})
-
+        eventBus.emit("openDialog", {
+          title: '登录失败',
+          text: response.data.msg,
+        })
       }
     })
   }
@@ -85,24 +92,6 @@ const registerRole = function () {
 };
 
 onMounted(() => {
-  eventBus.emit("openDialog", {
-    title: 'ops!!!!!',
-    text: 'none',
-    icon: 'mdi-update',
-    actions: [
-      {
-        text: 'Ok',
-        method: 'cancel'
-      }
-    ],
-    confirmFunc: function () {
-      console.log('confirm')
-    }
-    ,
-    cancelFunc: function () {
-      console.log('cancel')
-    }
-  })
 })
 </script>
 

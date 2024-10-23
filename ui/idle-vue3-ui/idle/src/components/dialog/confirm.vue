@@ -35,7 +35,7 @@ import {onMounted, ref} from "vue";
 const option = ref({
   title: 'ops!',
   text: 'none',
-  icon: 'mdi-update',
+  icon: 'mdi-alert-decagram',
   actions: [
     {
       text: 'Ok',
