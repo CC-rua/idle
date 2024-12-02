@@ -23,6 +23,8 @@
         <module>idle-framework-web</module>
         <module>idle-framework-rpc</module>
         <module>idle-framework-excel</module>
+        <module>idle-framework-redis</module>
+        <module>idle-framework-websocket</module>
     </modules>
 
 </project>
